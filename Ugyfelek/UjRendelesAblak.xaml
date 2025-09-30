@@ -1,0 +1,41 @@
+﻿<Window x:Class="Ugyfelek.UjRendelesAblak"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ugyfelek"
+        mc:Ignorable="d"
+        Title="UjRendelesAblak" Height="450" Width="800">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<TextBlock Text="Ügyfelek" Grid.Column="0" Grid.Row="0" Height="30"/>
+		<ComboBox Grid.Row="0" Grid.Column="1" x:Name="ugyfelek" Height="30" Width="200" HorizontalAlignment="Left"/>
+
+		<TextBlock Text="Termék neve" Grid.Column="0" Grid.Row="1" Height="30"/>
+		<TextBox x:Name="termek" Grid.Row="1" Grid.Column="1" Width="200" Height="30" HorizontalAlignment="Left"/>
+
+		<TextBlock Text="Mennyiség" Grid.Column="0" Grid.Row="2" Height="30"/>
+		<TextBox x:Name="mennyiseg" Grid.Row="2" Grid.Column="1" Width="200" Height="30" HorizontalAlignment="Left"/>
+
+		<TextBlock Text="Rendelés dátuma" Grid.Column="0" Grid.Row="3" Height="30"/>
+		<DatePicker x:Name="datum" Grid.Column="1" Grid.Row="3" Width="200" Height="30" HorizontalAlignment="Left"/>
+
+		<TextBlock Text="Ki van-e szállítva" Grid.Column="0" Grid.Row="4" Height="30"/>
+		<CheckBox Grid.Row="4" Grid.Column="1" Width="200" Height="30" HorizontalAlignment="Left" x:Name="kiszallitva"></CheckBox>
+
+		<Button Grid.Column="1" VerticalAlignment="Bottom" Grid.Row="5" Height="30" Width="100" HorizontalAlignment="Left" Content="Hozzáad" Click="Hozzaad_Click"/>
+	</Grid>
+</Window>
